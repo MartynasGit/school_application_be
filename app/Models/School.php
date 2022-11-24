@@ -19,6 +19,6 @@ class School extends Model
     ];
     public function requests()
     {
-        return $this->hasMany(Request::class);
+        return $this->hasMany(ApplyRequest::class);
     }
 }

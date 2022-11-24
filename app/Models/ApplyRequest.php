@@ -5,13 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Request extends Model
+class ApplyRequest extends Model
 {
     use HasFactory;
     protected $fillable = [
         'user_id',
         'school_id',
         'confirmation',
+        'full_name',
+        'id_code',
+        'grade'
 
     ];
     protected $hidden = [
@@ -23,7 +26,7 @@ class Request extends Model
     {
         return $this->belongsTo(User::class);
     }
-    public function hotel()
+    public function school()
     {
         return $this->belongsTo(School::class);
     }
