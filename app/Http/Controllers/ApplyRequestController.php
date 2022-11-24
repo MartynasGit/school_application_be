@@ -11,7 +11,7 @@ class ApplyRequestController extends Controller
     {
         if ($request->search === "name")
             return ApplyRequest::all();
-        return ApplyRequest::with(['hotel', 'user'])->get();
+        return ApplyRequest::with(['school', 'user'])->get();
     }
 
     public function store(Request $request)

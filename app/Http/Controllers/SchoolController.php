@@ -20,7 +20,7 @@ class SchoolController extends Controller
         }
 
 
-        return School::with('country')->get();
+        return School::all();
     }
 
     public function store(Request $request)
