@@ -5,20 +5,26 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class School extends Model
+class Request extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name',
-        'code',
-        'address',
+        'user_id',
+        'school_id',
+        'confirmation',
+
     ];
     protected $hidden = [
         'created_at',
         'updated_at',
     ];
-    public function requests()
+
+    public function user()
     {
-        return $this->hasMany(Request::class);
+        return $this->belongsTo(User::class);
+    }
+    public function hotel()
+    {
+        return $this->belongsTo(School::class);
     }
 }
