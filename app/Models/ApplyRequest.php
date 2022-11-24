@@ -14,7 +14,8 @@ class ApplyRequest extends Model
         'confirmation',
         'full_name',
         'id_code',
-        'grade'
+        'grade',
+        'bdate'
 
     ];
     protected $hidden = [

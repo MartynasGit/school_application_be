@@ -20,6 +20,7 @@ return new class extends Migration
             $table->foreignId('school_id')->nullable()->constrained('schools')->onDelete('cascade');
             $table->string('full_name');
             $table->bigInteger('id_code');
+            $table->string('bdate');
             $table->integer('grade');
             $table->timestamps();
         });
