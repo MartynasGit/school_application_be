@@ -36,13 +36,6 @@ class ApplyRequestController extends Controller
 
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'school_id' => 'required|max:255',
-            'hotel_id' => 'required|max:255',
-            'full_name' => 'required|max:255',
-            'id_code' => 'required|max:255',
-            'grade' => 'required|max:255',
-        ]);
         $ApplyRequest = ApplyRequest::find($id);
         $ApplyRequest->update($request->all());
         return $ApplyRequest;

@@ -10,7 +10,7 @@ class SchoolController extends Controller
     public function index(Request $request)
     {
         if ($request->search) {
-            return School::where('name', 'like', '%' . $request['search'] . '%')->with('country')->get();
+            return School::where('name', 'like', '%' . $request['search'] . '%')->get();
         }
         if ($request->sort === "country") {
             return School::with('country')->get()->sortBy('country.name')->values();
@@ -26,7 +26,7 @@ class SchoolController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|max:255',
+            'name' => 'required|max:255|unique:schools,name',
             'address' => 'required|max:255',
             'code' => 'required|max:255',
         ]);
