@@ -27,9 +27,8 @@ class SchoolController extends Controller
     {
         $request->validate([
             'name' => 'required|max:255',
-            'price' => 'required|max:255',
-            'duration' => 'required|max:255',
-            'image' => 'required|max:255',
+            'address' => 'required|max:255',
+            'code' => 'required|max:255',
         ]);
         return School::create($request->all());
     }
@@ -45,9 +44,8 @@ class SchoolController extends Controller
     {
         $request->validate([
             'name' => 'required|max:255',
-            'price' => 'required|max:255',
-            'duration' => 'required|max:255',
-            'image' => 'required|max:255',
+            'address' => 'required|max:255',
+            'code' => 'required|max:255',
         ]);
         $School = School::find($id);
         $School->update($request->all());
@@ -65,5 +63,4 @@ class SchoolController extends Controller
     {
         return School::where('name', 'like', '%' . $name . '%')->with('country')->get();
     }
-
 }

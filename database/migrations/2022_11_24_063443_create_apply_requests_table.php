@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId('user_id')->nullable()->constrained('users')->onDelete('cascade');
             $table->foreignId('school_id')->nullable()->constrained('schools')->onDelete('cascade');
             $table->string('full_name');
-            $table->integer('id_code');
+            $table->bigInteger('id_code');
             $table->integer('grade');
             $table->timestamps();
         });

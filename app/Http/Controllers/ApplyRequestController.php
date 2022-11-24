@@ -18,7 +18,7 @@ class ApplyRequestController extends Controller
     {
         $request->validate([
             'school_id' => 'required|max:255',
-            'hotel_id' => 'required|max:255',
+            'user_id' => 'required|max:255',
             'full_name' => 'required|max:255',
             'id_code' => 'required|max:255',
             'grade' => 'required|max:255',
