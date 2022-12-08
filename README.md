@@ -1,16 +1,45 @@
 # School aplication manager
 
-## This is Backend part of the app.
+This is Backend part of the project.
+To see frontend part of the project - https://github.com/MartynasGit/school_application_fe
+Project will run if both frontend and back end parts are started.
 
-* This app was created with:
-* Frontend: React, Backend: Laravel, Database: Mysql.
+### About project
 
-Application have user and admin roles. 
+* Used techonologies:
+    - frontend: React library.
+    - backend: Laravel framework
+    - database: MYSQL
 
-Application is secured with authorization.
+* Project:
+    - Is secured with authentication and users have roles
+    - Can show all schools form database
+    - User add and delete applications to school.
+    - Have admin page.
+    - Admin can add, delete, edit schools and applications from app.
 
-* Features:
-* For user to see all school list, search from school list declare application to school, delete application to school.
-* For admin add, edit, delete schools. Approve or deny aplications to school.
+### Launching Back_End part
 
+Clone backend part repository.
+git clone https://github.com/MartynasGit/school_application_be.git
+
+For project to run we need PHP interpreter(XAMPP), MySQL Workbench.
+- Run Xaamp MYSQL module.
+- In MYSQL workbench create eshop schema.
+- Change .env.example name to .env
+- inside cloned folder run: composer install
+- Now run migrations and seeders by typing in terminal:
+- php artisan migrate  // php artisan db:seed
+- php artisan serve
+- if both frontend and backend parts are on project is live at
+- http://localhost:3000
+
+
+## Author
+
+Project is created by Martynas Gumuliauskas.
+
+Github - MartynasGit.
+
+Linkedin - https://www.linkedin.com/in/martynasgum/
 
