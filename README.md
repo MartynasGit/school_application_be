@@ -33,6 +33,8 @@ For project to run we need PHP interpreter(XAMPP), MySQL Workbench.
 - php artisan serve
 - if both frontend and backend parts are on project is live at
 - http://localhost:3000
+- Admin acount:
+-  email: a@a.com password: password
 
 
 ## Author
