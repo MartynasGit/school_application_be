@@ -25,7 +25,7 @@ git clone https://github.com/MartynasGit/school_application_be.git
 
 For project to run we need PHP interpreter(XAMPP), MySQL Workbench.
 - Run Xaamp MYSQL module.
-- In MYSQL workbench create eshop schema.
+- In MYSQL workbench create schema named laravel.
 - Change .env.example name to .env
 - inside cloned folder run: composer install
 - Now run migrations and seeders by typing in terminal:
